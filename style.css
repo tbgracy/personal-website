@@ -32,6 +32,8 @@ a:hover {
     color: var(--accent-color);
 }
 
+section {}
+
 /* ------------------------ START NAVBAR ------------------------ */
 #links a {
     margin-left: .5em;
@@ -73,6 +75,8 @@ nav #logo {
 
 /* ---------------------- END NAVBAR ---------------------- */
 
+/* ------------------------ START ABOUT ------------------------ */
+
 #about {
     min-height: 100vh;
     padding-top: 2em;
@@ -80,16 +84,19 @@ nav #logo {
 }
 
 #about img {
-    width: 40%;
+    max-width: 40%;
+    min-width: 400px;
     position: absolute;
     right: 0;
-    /* filter: drop-shadow(6px 4px 0 var(--dark-color)) */
-            /* drop-shadow(4px 4px 0 var(--dark-color))*/;
+    bottom: 0;
 }
 
-img:hover{
-    filter: none;
+#about-text {
+    padding: 5em;
+    max-width: 55%;
+    line-height: 1.7em;
 }
+/* ---------------------- END ABOUT ---------------------- */
 
 #skills {
     background-color: var(--gray-color);
