@@ -32,7 +32,16 @@ a:hover {
     color: var(--accent-color);
 }
 
-section {}
+main section {
+    box-sizing: border-box;
+    padding: 5em 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2, h3 {
+    color: var(--accent-color);
+}
 
 /* ------------------------ START NAVBAR ------------------------ */
 #links a {
@@ -52,11 +61,18 @@ nav {
     background-color: var(--light-color);
 }
 
-nav #logo {
+#logo {
     font-size: larger;
     font-weight: bold;
     border-bottom: 4px solid var(--accent-color);
     padding-bottom: .05em;
+}
+
+#logo::after {
+    width: 10px;
+    height: 10px;
+    padding-left: 1em;
+    background-color: var(--accent-color);
 }
 
 #links {
@@ -79,7 +95,7 @@ nav #logo {
 
 #about {
     min-height: 100vh;
-    padding-top: 2em;
+    /* padding-top: 2em; */
     box-sizing: border-box;
 }
 
@@ -96,12 +112,9 @@ nav #logo {
     max-width: 55%;
     line-height: 1.7em;
 }
+
 /* ---------------------- END ABOUT ---------------------- */
 
-#skills {
-    background-color: var(--gray-color);
-    min-height: 100vh;
-}
 
 #projects {
     min-height: 100vh;
@@ -118,3 +131,52 @@ footer {
 }
 
 /* ---------------------- END NAVBAR ---------------------- */
+
+/* ------------------------ START SKILLS ------------------------ */
+
+#skills {
+    background-color: var(--gray-color);
+    min-height: 100vh;
+}
+
+#skills-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 900px) {
+    #skills-container {
+        flex-wrap: wrap;
+    }
+}
+
+.skill-set {
+    margin: 1em;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-item {
+    background-color: var(--light-color);
+    margin: .2em;
+    border-radius: 5px;
+    padding: .2em;
+    display: inline-block;
+}
+
+/* ---------------------- END SKILLS ---------------------- */
+
+/* --------------------- START PROJECTS ---------------------- */
+
+.project-img-container {
+    height: 200px;
+    width: 200px;
+    background-color: var(--gray-color);
+}
+
+/* ---------------------- END PROJECTS ------------------------ */
