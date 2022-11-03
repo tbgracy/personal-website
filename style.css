@@ -8,6 +8,7 @@
     --light-color: white;
     --gray-color: rgb(221, 221, 221);
     --dark-color: rgb(27, 27, 27);
+    --border-radius: 5px;
 }
 
 html {
@@ -39,7 +40,8 @@ main section {
     margin-right: auto;
 }
 
-h2, h3 {
+h2,
+h3 {
     color: var(--accent-color);
 }
 
@@ -176,7 +178,35 @@ footer {
 .project-img-container {
     height: 200px;
     width: 200px;
+    border-radius: 5px;
     background-color: var(--gray-color);
+}
+
+.projects-container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project {
+    margin: .5em;
+    text-align: right;
+}
+
+.project h3 {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .projects-container {
+        flex-wrap: wrap;
+    }
+}
+
+.project ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* ---------------------- END PROJECTS ------------------------ */
