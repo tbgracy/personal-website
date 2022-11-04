@@ -34,7 +34,7 @@ a:hover {
     color: var(--accent-color);
 }
 
-main{
+main {
     box-sizing: border-box;
     width: 60%;
     margin-left: auto;
@@ -44,6 +44,20 @@ main{
 h2,
 h3 {
     color: var(--accent-color);
+}
+
+button {
+    padding: 1em 2em;
+    border-radius: calc(var(--border-radius) * 2);
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--dark-color);
 }
 
 /* ------------------------ START NAVBAR ------------------------ */
@@ -217,4 +231,57 @@ footer {
 #external-links {
     font-size: larger;
 }
+
 /* ---------------------- END EXT LINKS ---------------------- */
+
+/* ----------------------- START CONTACT ------------------- */
+
+#contact form {
+    display: grid;
+    grid-template-areas:
+        "name         email"
+        "message      message"
+        ".  sendmessage"
+    ;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+}
+
+@media (max-width : 900px) {
+    #contact form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    textarea {
+        height: 20vh;
+    }
+}
+
+#name {
+    grid-area: name;
+}
+
+#email {
+    grid-area: email;
+}
+
+#message {
+    grid-area: message;
+}
+
+form button {
+    grid-area: sendmessage;
+}
+
+input,
+textarea {
+    padding: 1em;
+    /* margin: 1em; */
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--gray-color);
+}
+
+/* ---------------------- END CONTACT ---------------------- */
