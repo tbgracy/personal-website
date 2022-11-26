@@ -208,6 +208,7 @@ footer {
     height: 100%;
     width: 100%;
     border-radius: var(--border-radius);
+    border: 2px solid var(--gray-color);
 }
 
 .projects-container {
@@ -243,6 +244,9 @@ footer {
 #external-links {
     font-size: larger;
     margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
 }
 
 
