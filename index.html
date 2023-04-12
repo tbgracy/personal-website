@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div id="custom-pointer"></div>
     <nav>
         <div id="logo">tbgracy</div>
         <section id="links">
@@ -22,6 +23,7 @@
         </section>
         <div id="theme-switch">
             <i class="far fa-sun"></i>
+            <input type="checkbox" name="theme-switch" id="theme-switch-button">
             <i class="far fa-moon"></i>
         </div>
     </nav>
@@ -29,42 +31,28 @@
         <section id="about">
             <h2>About</h2>
             <h2>Tsierenana Botramanagna Gracy</h2>
-            <div id="about-text">
-                <div id="external-links">
-                    <a target="_blank" href="https://facebook.com/gracy.botramanagna"><i
-                            class="fab fa-facebook"></i></a>
-                    <a target="_blank" href="https://github.com/tbgracy"><i class="fab fa-github"></i></a>
-                    <a target="_blank" href="https://linkedin.com/in/tbgracy"><i class="fab fa-linkedin"></i></a>
-                    <a target="_blank" href="mailto:gtsierenana@gmail.com"><i class="far fa-envelope"></i></a>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo tempora pariatur voluptates ea
-                    veniam
-                    similique deserunt eos magni sunt incidunt harum ab, optio dicta nemo eligendi quisquam facere!
-                    Vitae,
-                    esse.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum aut porro similique dolores
-                    incidunt
-                    vero voluptatum nulla sunt assumenda, consequuntur, odit distinctio non necessitatibus, vitae
-                    sapiente?
-                    Suscipit numquam velit consequuntur!
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium similique illum ea animi,
-                    excepturi fugit dolores perspiciatis dolor odit nobis eos nulla delectus accusamus quisquam
-                    recusandae
-                    id, esse odio molestias.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum repellendus laudantium commodi
-                    amet
-                    pariatur rem necessitatibus doloribus dolorum odio odit minima impedit est provident sit, ex iste
-                    ab.
-                    Asperiores, et.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae obcaecati debitis harum distinctio
-                    hic,
-                    nesciunt similique quasi assumenda velit unde, deleniti sapiente porro quos. Quis omnis aut rerum
-                    iste
-                    magnam!
-                </p>
+            <div id="external-links">
+                <a target="_blank" href="https://facebook.com/gracy.botramanagna"><i class="fab fa-facebook"></i></a>
+                <a target="_blank" href="https://github.com/tbgracy"><i class="fab fa-github"></i></a>
+                <a target="_blank" href="https://linkedin.com/in/tbgracy"><i class="fab fa-linkedin"></i></a>
+                <a target="_blank" href="mailto:gtsierenana@gmail.com"><i class="far fa-envelope"></i></a>
             </div>
-            <img src="assets/portrait.png" alt="">
+            <div id="about-text">
+                <p>
+                    Hi, I'm Gracy, a <strong>Python</strong> and <strong>Flutter</strong> developer based in Antsirabe,
+                    Madagascar (but that doesn't mean I'm only familiar with those two techs 🙂).
+
+                    I recently graduated in Software Development at ASJA and I'm currently enrolled in Software
+                    Engineering graduate program in the same school. I'm also an ALX-T Udacity graduate (Full Stack
+                    Developer Nanodegree).
+
+                    I'm an avid reader and learner. Beside regular university courses,
+
+                    I discovered programming in highschool through OpenClassroom's old PDFs (a course about the C programming
+                    language).
+                </p>
+                <img src="assets/portrait_.png" alt="">
+            </div>
         </section>
 
         <section id="skills">
@@ -116,10 +104,12 @@
 
         <section id="projects">
             <h2>Stuff I made</h2>
+            <h3>Projects I'm most proud of</h3>
             <div class="projects-container">
                 <div class="project">
                     <h3>Kalyhub</h3>
-                    <div class="project-img-container"><img src="assets/projects/kalyhub-web.jpg" alt="kalyhub-screenshot"></div>
+                    <div class="project-img-container"><img src="assets/projects/kalyhub-web.jpg"
+                            alt="kalyhub-screenshot"></div>
                     <ul>
                         <li><a href="#">Project details</a></li>
                         <li><a href="#">Github repo</a></li>
@@ -127,15 +117,47 @@
                     </ul>
                 </div>
                 <div class="project">
-                <h3>O'trin</h3>
-                <div class="project-img-container"><img src="assets/projects/otrin.jpg" alt="otrin-screenshot"></div>
-                <ul>
-                    <li><a href="#">Project details</a></li>
-                    <li><a href="#">Github repo</a></li>
-                    <li><a href="#">Live demo</a></li>
-                </ul>
+                    <h3>O'trin</h3>
+                    <div class="project-img-container"><img src="assets/projects/otrin.jpg" alt="otrin-screenshot">
+                    </div>
+                    <ul>
+                        <li><a href="#">Project details</a></li>
+                        <li><a href="#">Github repo</a></li>
+                        <li><a href="#">Live demo</a></li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Ankamantatra</h3>
+                    <div class="project-img-container"><img src="assets/projects/otrin.jpg" alt="otrin-screenshot">
+                    </div>
+                    <ul>
+                        <li><a href="#">Project details</a></li>
+                        <li><a href="#">Github repo</a></li>
+                        <li><a href="#">Live demo</a></li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Github User search</h3>
+                    <div class="project-img-container"><img src="assets/projects/otrin.jpg" alt="otrin-screenshot">
+                    </div>
+                    <ul>
+                        <li><a href="#">Project details</a></li>
+                        <li><a href="#">Github repo</a></li>
+                        <li><a href="#">Live demo</a></li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Spotato</h3>
+                    <div class="project-img-container"><img src="assets/projects/otrin.jpg" alt="otrin-screenshot">
+                    </div>
+                    <ul>
+                        <li><a href="#">Project details</a></li>
+                        <li><a href="#">Github repo</a></li>
+                        <li><a href="#">Live demo</a></li>
+                    </ul>
                 </div>
             </div>
+            <h3>Other noteworthy projects</h3>
         </section>
 
         <section id="contact">
@@ -150,7 +172,7 @@
             <form action="#">
                 <input type="text" name="name" id="name" placeholder="Your name">
                 <input type="email" name="email" id="email" placeholder="Your e-mail address">
-                <textarea name="message" id="message" zplaceholder="Your message"></textarea>
+                <textarea name="message" id="message" placeholder="Your message"></textarea>
                 <button type="submit">Send message</button>
             </form>
         </section>
@@ -164,5 +186,9 @@
     <script src="assets/fontawesome/brands.min.js"></script>
     <!-- <script src="assets/fontawesome/solid.min.js"></script> -->
 </body>
+
+<script src="./script.js"></script>
+<script src="./scripts/language_switch.js"></script>
+<script src="./scripts/theme_switch.js"></script>
 
 </html>

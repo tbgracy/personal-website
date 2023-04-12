@@ -4,3 +4,4 @@
 - [ ] Add appearence animation
 - [ ] Add animation
 - [ ] "Let's talk" action
+- [ ] SEO

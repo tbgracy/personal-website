@@ -3,6 +3,21 @@
     src: url("assets/fonts/PlusJakartaSans.ttf");
 }
 
+@font-face {
+    font-family: "Montserrat-Alternate";
+    src: url("assets/fonts/MontserratAlternates-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Aloevera";
+    src: url("assets/fonts/Aloevera-OVoWO.ttf");
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("assets/fonts/Nunito-VariableFont_wght.ttf");
+}
+
 :root {
     /* --accent-color: teal; */
     --accent-color: #00abb3;
@@ -10,12 +25,17 @@
     --gray-color: rgb(221, 221, 221);
     --dark-color: rgb(27, 27, 27);
     --border-radius: 5px;
+    --transition-duration: .4s;
 }
 
 html {
     scroll-behavior: smooth;
-    font-family: "Jakarta", "Sans Serif";
+    font-family: "Nunito", "Sans Serif";
 
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Montserrat-Alternate", "Sans Serif";
 }
 
 body {
@@ -27,11 +47,15 @@ a {
     color: var(--dark-color);
     font-weight: bold;
     text-decoration: none;
+    transition-property: all;
+    transition-duration: var(--transition-duration);
 }
 
 a:hover {
     /* font-weight: lighter; */
     color: var(--accent-color);
+    transition-property: all;
+    transition-duration: var(--transition-duration);
 }
 
 main {
@@ -41,6 +65,12 @@ main {
     margin-right: auto;
     margin-top: 61px;
     padding: 20px;
+}
+
+@media (max-width: 900px){
+    main {
+        width: 90%;
+    }
 }
 
 h2,
@@ -55,11 +85,15 @@ button {
     background-color: var(--accent-color);
     color: var(--light-color);
     font-weight: bold;
+    transition-property: all;
+    transition-duration: var(--transition-duration);
 }
 
 button:hover {
     cursor: pointer;
     background-color: var(--dark-color);
+    transition-property: all;
+    transition-duration: var(--transition-duration);
 }
 
 /* ------------------------ START NAVBAR ------------------------ */
@@ -124,13 +158,29 @@ nav {
     max-width: 40%;
     min-width: 400px;
     position: absolute;
-    right: 0;
+    right: 7em;
     bottom: 0;
 }
 
 #about-text {
     max-width: 55%;
     line-height: 1.7em;
+}
+
+@media (max-width: 900px) {
+    #about-text {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: none;
+    }
+    #about img {
+        position: relative;
+        width: auto;
+        height: auto;
+        right: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* ---------------------- END ABOUT ---------------------- */
@@ -190,6 +240,16 @@ footer {
     border-radius: 5px;
     padding: .2em;
     display: inline-block;
+    transition-property: all;
+    transition-duration: var(--transition-duration);
+}
+
+.skill-item:hover {
+    background-color: var(--accent-color);
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: var(--transition-duration);
+    color: white;
 }
 
 /* ---------------------- END SKILLS ---------------------- */
@@ -249,6 +309,11 @@ footer {
     width: fit-content;
 }
 
+#external-links a {
+    /* margin: auto .3em; */
+    box-sizing: border-box;
+    border: 10px solid transparent;
+}
 
 /* ---------------------- END EXT LINKS ---------------------- */
 
@@ -303,3 +368,20 @@ textarea {
 }
 
 /* ---------------------- END CONTACT ---------------------- */
+
+
+/* ------------------------ START CUSTOM POINTER ------------------*/
+
+#custom-pointer {
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent-color);
+    z-index: -50;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: .15s, width 1s, height 1s, opacity 1s;
+}
+
+/* ---------------------- END CUSTOM POINTER ---------------------- */
