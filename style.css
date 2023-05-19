@@ -23,7 +23,8 @@
     --accent-color: #00abb3;
     --light-color: white;
     --gray-color: rgb(221, 221, 221);
-    --dark-color: rgb(27, 27, 27);
+    /* --dark-color: rgb(27, 27, 27); */
+    --dark-color: #2c2c2c;
     --border-radius: 5px;
     --transition-duration: .4s;
 }
@@ -31,11 +32,34 @@
 html {
     scroll-behavior: smooth;
     font-family: "Nunito", "Sans Serif";
-
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-family: "Montserrat-Alternate", "Sans Serif";
+    font-weight: bold;
+}
+
+::selection {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+}
+
+body::-webkit-scrollbar {
+    width: .5rem;
+    height: .5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--gray-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
 }
 
 body {
@@ -67,13 +91,17 @@ main {
     padding: 20px;
 }
 
-@media (max-width: 900px){
+p {
+    color: var(--dark);
+}
+
+@media (max-width: 900px) {
     main {
         width: 90%;
     }
 }
 
-h2,
+/* h2, */
 h3 {
     color: var(--accent-color);
 }
@@ -173,6 +201,7 @@ nav {
         flex-direction: column-reverse;
         max-width: none;
     }
+
     #about img {
         position: relative;
         width: auto;
@@ -200,7 +229,7 @@ footer {
     text-align: center;
     box-sizing: border-box;
     padding: 1em;
-    
+
 }
 
 /* ---------------------- END FOOTER ---------------------- */
@@ -381,7 +410,7 @@ textarea {
     position: absolute;
     top: 0;
     bottom: 0;
-    transition: .15s, width 1s, height 1s, opacity 1s;
+    transition: .15s, width .2s, height .2s, opacity 1s;
 }
 
 /* ---------------------- END CUSTOM POINTER ---------------------- */
