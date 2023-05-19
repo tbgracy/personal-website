@@ -2,6 +2,20 @@ const customPointer = document.getElementById('custom-pointer');
 
 const skillTiles = document.getElementsByClassName('skill-item');
 
+const externalLinks = document.getElementsByClassName('external-link-item');
+
+// TODO : Mila mi-créer objet customPointer pour mieux gérer l'état
+
+for (let i = 0; i < externalLinks.length; i++) {
+    const externalLink = externalLinks[i];
+    externalLink.onpointerenter = (e) => {
+        customPointer.style.opacity = '0';
+    };
+    externalLink.onpointerleave = (e) => {
+        customPointer.style.opacity = '1';
+    };
+}
+
 for (let i = 0; i < skillTiles.length; i++) {
     const skillTile = skillTiles[i];
     skillTile.onpointerenter = (e) => {
