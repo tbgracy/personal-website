@@ -11,6 +11,13 @@
 @font-face {
     font-family: "Aloevera";
     src: url("assets/fonts/Aloevera-OVoWO.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Montserrat-Alternate";
+    src: url("assets/fonts/MontserratAlternates-Bold.ttf");
+    font-weight: bold;
 }
 
 @font-face {
@@ -41,6 +48,7 @@ h4,
 h5 {
     font-family: "Montserrat-Alternate", "Sans Serif";
     font-weight: bold;
+    letter-spacing: .3rem;
 }
 
 ::selection {
@@ -91,6 +99,11 @@ main {
     padding: 20px;
 }
 
+hr {
+    border: .5px solid rgba(128, 128, 128, 0.39);
+    width: 95vw;
+}
+
 p {
     color: var(--dark);
 }
@@ -101,9 +114,10 @@ p {
     }
 }
 
-/* h2, */
+h2,
 h3 {
     color: var(--accent-color);
+    text-shadow: 0 0 3px #2c2c2c62;
 }
 
 button {
