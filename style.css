@@ -134,6 +134,7 @@ button {
 }
 
 button:hover {
+    box-shadow: 0 5px 10px var(--accent-color);
     cursor: pointer;
     background-color: var(--dark-color);
     transition-property: all;
@@ -309,17 +310,14 @@ footer {
 /* ---------------------- END SKILLS ---------------------- */
 
 /* --------------------- START PROJECTS ---------------------- */
-
-#projects {
-    /* min-width: 100%; */
-    /* max-width: 80vh; */
-}
-
 .project {
     margin: 1rem;
     text-align: right;
-    /* background-color: var(--gray-color); */
-    width: 250px;
+    box-shadow: 0 0 10px var(--gray-color);
+    background-color: var(--light-color);
+    width: 300px;
+    height: fit-content;
+    position: relative;
     border-radius: 5px;
 }
 
@@ -327,9 +325,10 @@ footer {
 
 .project-img-container {
     height: 250px;
-    width: 250px;
+    width: 100%;
     border-radius: 5px;
     background-color: var(--gray-color);
+    position: relative;
 }
 
 .project img {
@@ -337,7 +336,7 @@ footer {
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
     border: 2px solid var(--gray-color);
 }
 
@@ -355,6 +354,17 @@ footer {
 
 .project h3 {
     text-align: center;
+    padding: .5rem 1rem .3rem 1rem;
+    width: fit-content;
+    font-size: smaller;
+    z-index: 100;
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    color: white;
+    position: absolute;
+    left: 1rem;
+    max-width: 70%;
+    box-shadow: 0 0 10px var(--accent-color);
 }
 
 @media (max-width: 900px) {
@@ -365,8 +375,46 @@ footer {
 
 .project ul {
     list-style: none;
-    margin: 0;
+    margin: 1rem;
     padding: 0;
+}
+
+.project ul li {
+    margin-bottom: .5rem;
+}
+
+.project__links {
+    transform: scale(0);
+    height: 0;
+    transition: all .5s ease-out;
+}
+
+.project:hover .project__links {
+    position: relative;
+    height: auto;
+    transform: scale(1);
+    transition: all .5s ease-in;
+}
+
+.project__stack-list {
+    max-width: 100%;
+    margin: 0 1rem !important;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.project__stack-item{
+    display: inline-block;
+    background-color: var(--gray-color);
+    border-radius: 10px;
+    padding: 0 1rem;
+    font-size: smaller;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.project p {
+    text-align: center;
 }
 
 /* ---------------------- END PROJECTS ------------------------ */
