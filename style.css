@@ -1,23 +1,6 @@
 @font-face {
-    font-family: "Jakarta";
-    src: url("assets/fonts/PlusJakartaSans.ttf");
-}
-
-@font-face {
-    font-family: "Montserrat-Alternate";
-    src: url("assets/fonts/MontserratAlternates-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Aloevera";
-    src: url("assets/fonts/Aloevera-OVoWO.ttf");
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "Montserrat-Alternate";
-    src: url("assets/fonts/MontserratAlternates-Bold.ttf");
-    font-weight: bold;
+    font-family: "Neus";
+    src: url("assets/fonts/NeusaNextStdTrial-WideRegular-BF63ec3d6e7e6cd.otf");
 }
 
 @font-face {
@@ -46,7 +29,7 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: "Montserrat-Alternate", "Sans Serif";
+    font-family: "Neus", "Sans Serif";
     font-weight: bold;
     letter-spacing: .3rem;
 }
@@ -73,6 +56,20 @@ body::-webkit-scrollbar-thumb {
 body {
     margin: 0;
     padding: 0;
+    background-image:
+        url("assets/bg/1.png"),
+        url("assets/bg/2.png"),
+        url("assets/bg/3.png"),
+        url("assets/bg/4.png"),
+        url("assets/bg/5.png");
+    background-repeat: no-repeat;
+    background-position: 
+        0% 0%,
+        50% 70%,
+        100% 20%,
+        70% 40%,
+        0% 100%;
+    background-size: auto;
 }
 
 a {
@@ -117,7 +114,12 @@ p {
 h2,
 h3 {
     color: var(--accent-color);
-    text-shadow: 0 0 3px #2c2c2c62;
+    /* font-size: 2rem; */
+    /* text-shadow: 0 0 3px #2c2c2c62; */
+}
+
+h2 {
+    font-size: 2rem;
 }
 
 button {
@@ -138,6 +140,18 @@ button:hover {
     transition-duration: var(--transition-duration);
 }
 
+.hgroup-with-icon {
+    display: flex;
+    align-items: center;
+}
+
+.hgroup-with-icon img {
+    width: 2rem !important;
+    display: block;
+    aspect-ratio: 1/1;
+    margin-right: 1rem;
+}
+
 /* ------------------------ START NAVBAR ------------------------ */
 #links a {
     margin-left: .5em;
@@ -155,7 +169,8 @@ nav {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    background-color: var(--light-color);
+    background-color: rgba(255, 255, 255, 0.342);
+    backdrop-filter: blur(10px);
 }
 
 #logo {
@@ -196,7 +211,7 @@ nav {
     box-sizing: border-box;
 }
 
-#about img {
+#about-text img {
     max-width: 40%;
     min-width: 400px;
     position: absolute;
@@ -216,7 +231,7 @@ nav {
         max-width: none;
     }
 
-    #about img {
+    #about-text img {
         position: relative;
         width: auto;
         height: auto;
@@ -228,10 +243,6 @@ nav {
 
 /* ---------------------- END ABOUT ---------------------- */
 
-
-#projects {
-    /* min-height: 100vh; */
-}
 
 #contact {
     /* background-color: var(--gray-color); */
@@ -299,15 +310,31 @@ footer {
 
 /* --------------------- START PROJECTS ---------------------- */
 
+#projects {
+    /* min-width: 100%; */
+    /* max-width: 80vh; */
+}
+
+.project {
+    margin: 1rem;
+    text-align: right;
+    /* background-color: var(--gray-color); */
+    width: 250px;
+    border-radius: 5px;
+}
+
+
+
 .project-img-container {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     border-radius: 5px;
     background-color: var(--gray-color);
 }
 
 .project img {
     object-fit: cover;
+    box-sizing: border-box;
     height: 100%;
     width: 100%;
     border-radius: var(--border-radius);
@@ -315,14 +342,15 @@ footer {
 }
 
 .projects-container {
-    flex-wrap: wrap;
     display: flex;
-    justify-content: space-evenly;
-}
-
-.project {
-    margin: .5em;
-    text-align: right;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .project h3 {
